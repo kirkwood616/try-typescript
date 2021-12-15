@@ -1,3 +1,5 @@
+import { planet, BootcampStudent, birthday } from "./script";
+
 console.log("Hell World!");
 
 // VARIABLES
@@ -138,3 +140,5 @@ let myCar: Car = {
 };
 
 carVar(myCar);
+
+console.log(planet);
