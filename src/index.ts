@@ -47,13 +47,7 @@ function calculateTotal(listOfNumbers: number[]): number {
   return total;
 }
 
-// function calculateTotal(listOfNumbers) {
-//     let total: 0;
-//     for (let i = 0; i < listOfNumbers.length; i++) {
-//       total += listOfNumbers[i];
-//     }
-//     return total;
-// }
+///////////////
 
 function add(numOne: number, numTwo: number = 0): number {
   return numOne + numTwo;
@@ -87,3 +81,60 @@ function getAreaOfTriangle(base: number, height: number): number {
   return (base * height) / 2;
 }
 console.log(getAreaOfTriangle(10, 15));
+
+// DEFINING AN INTERFACE
+interface Person {
+  firstName: string;
+  lastName: string;
+}
+
+// USING AN INTERFACE AS A TYPE
+function greeter(person: Person): void {
+  console.log(`Hi ${person.firstName}`);
+}
+
+// USING AN INTERFACE TO CREATE A VARIABLE
+let myPerson: Person = {
+  firstName: "Awesome Bill",
+  lastName: "From Dawsonville",
+};
+
+greeter(myPerson);
+
+interface Pet {
+  breed: string;
+  name: string;
+  age: number;
+}
+
+let tank: Pet = {
+  breed: "Wiener-Pit",
+  name: "Tank",
+  age: 2.5,
+};
+
+let snoopy: Pet = {
+  breed: "Beagle",
+  name: "Snoopy",
+  age: 10,
+};
+
+// greeter(snoopy); //INVALID
+
+interface Car {
+  make: string;
+  model: string;
+  color: string;
+}
+
+function carVar(car: Car): void {
+  console.log(`My ${car.make} ${car.model} is ${car.color}`);
+}
+
+let myCar: Car = {
+  make: "Ford",
+  model: "Tempo",
+  color: "Teal",
+};
+
+carVar(myCar);
